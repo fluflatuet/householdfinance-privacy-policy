@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="it" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App Finanza Domestica - Manuale Utente</title>
+    <style>
+        :root {
+            --primary-color: #6750A4;
+            --secondary-color: #F3EDF7;
+            --text-color: #1C1B1F;
+            --bg-color: #FFFBFE;
+            --surface-variant: #E7E0EC;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 24px 16px;
+            text-align: center;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 16px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--surface-variant);
+        }
+        nav h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: block;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--surface-variant);
+            text-align: center;
+        }
+        main {
+            padding: 0 16px 40px 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 48px;
+            scroll-margin-top: 20px;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            font-size: 1.3rem;
+            margin-top: 32px;
+        }
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-top: 24px;
+        }
+        .screenshot-container {
+            margin: 24px 0;
+            text-align: center;
+            background: #f8f8f8;
+            padding: 12px;
+            border-radius: 16px;
+        }
+        .screenshot-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            transform: translateZ(0);
+            background-color: var(--surface-variant);
+        }
+        .caption {
+            margin-top: 12px;
+            font-style: italic;
+            color: #49454F;
+            font-size: 0.85rem;
+        }
+        .tip {
+            background-color: #E3F2FD;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 24px 0;
+            font-size: 0.9rem;
+            border-left: 4px solid #2196F3;
+        }
+        .back-to-top {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.85rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid var(--surface-variant);
+        }
+        th {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        .language-selector {
+            margin-top: 12px;
+        }
+        .language-selector select {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--surface-variant);
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="margin:0; font-size: 1.4rem;">Manuale Utente</h1>
+        <div class="language-selector">
+            <select onchange="window.location.href=this.value">
+                <option value="user_manual.html">English</option>
+                <option value="user_manual_de.html">Deutsch</option>
+                <option value="user_manual_es.html">Español</option>
+                <option value="user_manual_fr.html">Français</option>
+                <option value="user_manual_it.html" selected>Italiano</option>
+                <option value="user_manual_ja.html">日本語</option>
+                <option value="user_manual_pt.html">Português</option>
+            </select>
+        </div>
+    </header>
+
+    <nav>
+        <h2>Navigazione Rapida</h2>
+        <ul>
+            <li><a href="#intro">Introduzione</a></li>
+            <li><a href="#getting-started">Iniziare</a></li>
+            <li><a href="#members">Gestione Membri</a></li>
+            <li><a href="#income">Aggiungere Entrate</a></li>
+            <li><a href="#expenses">Monitorare Spese</a></li>
+            <li><a href="#goals">Gestione Obiettivi</a></li>
+            <li><a href="#calculations">Modelli di Ripartizione</a></li>
+            <li><a href="#settings">Impostazioni</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="intro">
+            <h2>1. Introduzione</h2>
+            <p>Benvenuti nell'App Finanza Domestica! Questo strumento aiuta le famiglie a gestire le finanze condivise in modo trasparente. Che si tratti di dividere l'affitto al 50/50 o di utilizzare ripartizioni complesse, i calcoli li facciamo noi, così potrai concentrarti sui tuoi obiettivi.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/drawer_overview.webp" alt="Menu dell'App" loading="lazy">
+                <div class="caption">Naviga rapidamente tra tutte le funzioni principali usando il menu laterale.</div>
+            </div>
+        </section>
+
+        <section id="getting-started">
+            <h2>2. Iniziare</h2>
+            <p>La <strong>Panoramica del Nucleo</strong> è il tuo centro di controllo. Mostra un riepilogo di entrate, spese e, cosa più importante, il contributo calcolato per ogni membro in base alla strategia selezionata.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/household_overview.webp" alt="Panoramica Nucleo" loading="lazy">
+                <div class="caption">La schermata Panoramica del Nucleo mostra un riepilogo finanziario consolidato.</div>
+            </div>
+            <a href="#" class="back-to-top">↑ Torna al Menu</a>
+        </section>
+
+        <section id="members">
+            <h2>3. Gestione Membri</h2>
+            <p>Per aggiungere un nuovo membro, tocca il pulsante <strong>+</strong> nella schermata del Nucleo. I membri sono la base di tutti i calcoli.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/household_add_member.webp" alt="Schermata Aggiungi Membro" loading="lazy">
+                <div class="caption">Aggiunta di un nuovo membro con nome e colore personalizzati.</div>
+            </div>
+            <p><strong>Membri Regolari:</strong> Tipicamente i principali lavoratori le cui entrate sono utilizzate per calcolare i rapporti di ripartizione.<br>
+            <strong>Membri Speciali:</strong> Usati per dipendenti o fondi condivisi (come un 'Fondo Comune'). Le loro entrate (assegni, pensioni) vengono dedotte dalle spese totali prima del calcolo della ripartizione.</p>
+            <a href="#" class="back-to-top">↑ Torna al Menu</a>
+        </section>
+
+        <section id="income">
+            <h2>4. Aggiungere Entrate</h2>
+            <p>Monitora tutte le fonti di reddito nella sezione <strong>Entrate</strong>. Puoi vedere un dettaglio di chi contribuisce con quanto al totale del nucleo familiare.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/income_overview.webp" alt="Monitoraggio Entrate" loading="lazy">
+                <div class="caption">Dettaglio delle entrate per membro e categoria.</div>
+            </div>
+            <h3>Trend delle Entrate</h3>
+            <p>L'app tiene traccia della tua cronologia finanziaria. La modifica di un importo di un'entrata crea un record storicizzato, permettendoti di vedere come evolvono i tuoi guadagni nel tempo.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/trends_income_with_history.webp" alt="Trend Entrate" loading="lazy">
+                <div class="caption">Visualizza la cronologia delle tue entrate e i trend di crescita.</div>
+            </div>
+            <a href="#" class="back-to-top">↑ Torna al Menu</a>
+        </section>
+
+        <section id="expenses">
+            <h2>5. Monitorare le Spese</h2>
+            <p>Le spese sono categorizzate per aiutarti a identificare dove vanno i tuoi soldi. Possono essere assegnate a singoli membri o al nucleo familiare condiviso.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/expenses_overview.webp" alt="Monitoraggio Spese" loading="lazy">
+                <div class="caption">Elenco spese categorizzato con un grafico a torta per la ripartizione visiva.</div>
+            </div>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/trends_expenses_with_history.webp" alt="Cronologia Spese" loading="lazy">
+                <div class="caption">Analizza i modelli di spesa con i dati storici dei trend.</div>
+            </div>
+            <a href="#" class="back-to-top">↑ Torna al Menu</a>
+        </section>
+
+        <section id="goals">
+            <h2>6. Gestione Obiettivi e Budget</h2>
+            <p>La sezione <strong>Obiettivi</strong> è un potente strumento sia per risparmiare per i tuoi sogni che per limitare le spese tramite i budget.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_overview_with_transaction_log.webp" alt="Panoramica Obiettivi" loading="lazy">
+                <div class="caption">Schermata principale degli obiettivi con barre di progresso e transazioni recenti.</div>
+            </div>
+
+            <h3>Creare un Obiettivo di Risparmio</h3>
+            <p>Quando crei un obiettivo di risparmio, puoi impostare un importo target e persino includere gli interessi attesi. Questo ti aiuta a mantenere la motivazione mentre vedi la barra di progresso riempirsi.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_goal_with_target.webp" alt="Aggiungi Obiettivo di Risparmio" loading="lazy">
+                <div class="caption">Configurazione di un nuovo obiettivo di risparmio con un target specifico.</div>
+            </div>
+
+            <h3>Creare un Budget</h3>
+            <p>I budget sono obiettivi "invertiti". Invece di risparmiare verso un target, imposti un limite per una categoria o un periodo specifico. L'app ti avvisa quando ti avvicini al limite.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_budget.webp" alt="Aggiungi Budget" loading="lazy">
+                <div class="caption">Definizione di un limite massimo di spesa per un budget.</div>
+            </div>
+
+            <h3>Gestione dei Progressi</h3>
+            <p>Aggiungi transazioni manualmente o imposta <strong>Transazioni Ricorrenti</strong> per contributi di risparmio regolari o reset mensili del budget.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_transaction_recurring.webp" alt="Transazione Ricorrente" loading="lazy">
+                <div class="caption">Automatizza le tue finanze con transazioni ricorrenti per gli obiettivi.</div>
+            </div>
+
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_edit_goal_add_interest.webp" alt="Aggiungi Interessi" loading="lazy">
+                <div class="caption">Registra i pagamenti degli interessi per vedere i tuoi risparmi crescere più velocemente.</div>
+            </div>
+
+            <h3>Traguardi e Trend</h3>
+            <p>Celebra i tuoi progressi! L'app fornisce feedback quando raggiungi traguardi come essere "A metà strada" di un budget o "Quasi arrivato" con i tuoi risparmi.</p>
+            <div style="display: flex; gap: 8px; margin: 24px 0;">
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/goals_milestone_savings_almost_there.webp" alt="Traguardo Risparmio">
+                </div>
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/goals_milestone_budget_halfway_through.webp" alt="Traguardo Budget">
+                </div>
+            </div>
+
+            <p>Usa la vista <strong>Trend</strong> per vedere le date di completamento previste per i risparmi o i giorni rimanenti per un budget in base alla cronologia delle transazioni.</p>
+            <div style="display: flex; gap: 8px; margin: 24px 0;">
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/trends_goals_with_savings.webp" alt="Trend Risparmio">
+                </div>
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/trends_goals_with_budget.webp" alt="Trend Budget">
+                </div>
+            </div>
+
+            <a href="#" class="back-to-top">↑ Torna al Menu</a>
+        </section>
+
+        <section id="calculations">
+            <h2>7. Modelli di Contributo</h2>
+            <p>Scegli la strategia che meglio si adatta ai valori del tuo nucleo familiare. Puoi cambiarla in qualsiasi momento nelle impostazioni.</p>
+            <table>
+                <tr><th>Modello</th><th>Descrizione</th></tr>
+                <tr><td><strong>Divisione 50/50</strong></td><td>Quota uguale per tutti, indipendentemente dal reddito.</td></tr>
+                <tr><td><strong>Divisione Relativa</strong></td><td>Proporzionale alla quota di ciascun membro sul reddito totale.</td></tr>
+                <tr><td><strong>Importo Fisso</strong></td><td>Ogni membro tiene una somma fissa; il resto va nel fondo comune.</td></tr>
+                <tr><td><strong>Conto Cointestato</strong></td><td>Tutte le entrate vanno in un unico fondo; tutte le spese escono da lì.</td></tr>
+            </table>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/settings_strategy_and_general.webp" alt="Panoramica Impostazioni" loading="lazy">
+                <div class="caption">Passa da una strategia di contributo all'altra con un semplice tocco.</div>
+            </div>
+            <a href="#" class="back-to-top">↑ Torna al Menu</a>
+        </section>
+
+        <section id="settings">
+            <h2>8. Impostazioni e Sicurezza</h2>
+            <p>La tua privacy è fondamentale. Tutti i dati sono crittografati tramite SQLCipher e memorizzati solo sul tuo dispositivo. Noi non vediamo mai i tuoi dati finanziari.</p>
+            <ul>
+                <li><strong>Biometria:</strong> Abilita l'impronta digitale o il riconoscimento facciale per una maggiore sicurezza.</li>
+                <li><strong>Gestione Dati:</strong> Esporta in CSV per analisi esterne o crea backup crittografati.</li>
+                <li><strong>Localizzazione:</strong> Personalizza il simbolo della valuta e la lingua dell'app.</li>
+            </ul>
+            <a href="#" class="back-to-top">↑ Torna al Menu</a>
+        </section>
+
+        <section id="best-practices">
+            <h2>9. Best Practices</h2>
+            <div class="tip">
+                <strong>Suggerimento Pro:</strong> Usa il "Membro Condiviso" per le spese che beneficiano l'intero nucleo, come la spesa o le bollette.
+            </div>
+            <ul>
+                <li><strong>La frequenza è importante:</strong> Assicurati che tutte le entrate e le spese siano impostate sulla stessa frequenza (es. Mensile) per un confronto più accurato nella "Panoramica del Nucleo".</li>
+                <li><strong>Controlla i Trend:</strong> Consulta la sezione Trend una volta al mese per vedere se le tue abitudini di spesa stanno cambiando.</li>
+                <li><strong>Fai spesso il backup:</strong> Poiché i dati sono locali, la perdita del dispositivo comporta la perdita dei dati. Usa regolarmente la funzione di Backup Crittografato!</li>
+            </ul>
+            <a href="#" class="back-to-top">↑ Torna al Menu</a>
+        </section>
+    </main>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ja" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>家計管理アプリ - ユーザーマニュアル</title>
+    <style>
+        :root {
+            --primary-color: #6750A4;
+            --secondary-color: #F3EDF7;
+            --text-color: #1C1B1F;
+            --bg-color: #FFFBFE;
+            --surface-variant: #E7E0EC;
+        }
+        body {
+            font-family: 'Roboto', 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 24px 16px;
+            text-align: center;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 16px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--surface-variant);
+        }
+        nav h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: block;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--surface-variant);
+            text-align: center;
+        }
+        main {
+            padding: 0 16px 40px 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 48px;
+            scroll-margin-top: 20px;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            font-size: 1.3rem;
+            margin-top: 32px;
+        }
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-top: 24px;
+        }
+        .screenshot-container {
+            margin: 24px 0;
+            text-align: center;
+            background: #f8f8f8;
+            padding: 12px;
+            border-radius: 16px;
+        }
+        .screenshot-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            transform: translateZ(0);
+            background-color: var(--surface-variant);
+        }
+        .caption {
+            margin-top: 12px;
+            font-style: italic;
+            color: #49454F;
+            font-size: 0.85rem;
+        }
+        .tip {
+            background-color: #E3F2FD;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 24px 0;
+            font-size: 0.9rem;
+            border-left: 4px solid #2196F3;
+        }
+        .back-to-top {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.85rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid var(--surface-variant);
+        }
+        th {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        .language-selector {
+            margin-top: 12px;
+        }
+        .language-selector select {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--surface-variant);
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="margin:0; font-size: 1.4rem;">ユーザーマニュアル</h1>
+        <div class="language-selector">
+            <select onchange="window.location.href=this.value">
+                <option value="user_manual.html">English</option>
+                <option value="user_manual_de.html">Deutsch</option>
+                <option value="user_manual_es.html">Español</option>
+                <option value="user_manual_fr.html">Français</option>
+                <option value="user_manual_it.html">Italiano</option>
+                <option value="user_manual_ja.html" selected>日本語</option>
+                <option value="user_manual_pt.html">Português</option>
+            </select>
+        </div>
+    </header>
+
+    <nav>
+        <h2>クイックナビゲーション</h2>
+        <ul>
+            <li><a href="#intro">はじめに</a></li>
+            <li><a href="#getting-started">使い方ガイド</a></li>
+            <li><a href="#members">メンバー管理</a></li>
+            <li><a href="#income">収入の追加</a></li>
+            <li><a href="#expenses">支出の記録</a></li>
+            <li><a href="#goals">目標の管理</a></li>
+            <li><a href="#calculations">分担モデル</a></li>
+            <li><a href="#settings">設定</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="intro">
+            <h2>1. はじめに</h2>
+            <p>家計管理アプリへようこそ！このツールは、世帯の共有財務を透明に管理するためのものです。家賃を50/50で折半する場合でも、複雑な比率で分担する場合でも、計算はすべてアプリにお任せください。ユーザーの皆様が目標に集中できるようサポートします。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/drawer_overview.webp" alt="アプリのメニュー" loading="lazy">
+                <div class="caption">サイドメニューを使用して、すべての主要機能に素早くアクセスできます。</div>
+            </div>
+        </section>
+
+        <section id="getting-started">
+            <h2>2. 使い方ガイド</h2>
+            <p><strong>世帯の概要</strong>は、全体像を把握するためのセントラルハブです。収入、支出の要約、そして最も重要な、選択した戦略に基づいた各メンバーの負担額を表示します。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/household_overview.webp" alt="世帯の概要" loading="lazy">
+                <div class="caption">統合された財務サマリーを表示する世帯概要画面。</div>
+            </div>
+            <a href="#" class="back-to-top">↑ メニューに戻る</a>
+        </section>
+
+        <section id="members">
+            <h2>3. メンバー管理</h2>
+            <p>新しいメンバーを追加するには、世帯画面の <strong>+</strong> ボタンをタップします。メンバーはすべての計算の基礎となります。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/household_add_member.webp" alt="メンバー追加画面" loading="lazy">
+                <div class="caption">カスタムの名前と色で新しいメンバーを追加します。</div>
+            </div>
+            <p><strong>通常メンバー:</strong> 主に世帯の主たる収入源となるメンバーで、その収入が分担比率の計算に使用されます。<br>
+            <strong>特別メンバー:</strong> 扶養家族や共有資金（「共通の財布」など）に使用します。その収入（手当、養育費など）は、分担が計算される前に総支出から差し引かれます。</p>
+            <a href="#" class="back-to-top">↑ メニューに戻る</a>
+        </section>
+
+        <section id="income">
+            <h2>4. 収入の追加</h2>
+            <p><strong>収入</strong>セクションで、すべての収益源を記録します。誰が世帯の合計にいくら貢献しているかの内訳を確認できます。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/income_overview.webp" alt="収入の追跡" loading="lazy">
+                <div class="caption">メンバーおよびカテゴリ別の収入の内訳。</div>
+            </div>
+            <h3>収入のトレンド</h3>
+            <p>アプリは財務履歴を保持します。収入の金額を変更すると履歴レコードが作成され、収益が時間の経過とともにどのように変化したかを確認できます。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/trends_income_with_history.webp" alt="収入のトレンド" loading="lazy">
+                <div class="caption">収入の履歴と成長トレンドを確認できます。</div>
+            </div>
+            <a href="#" class="back-to-top">↑ メニューに戻る</a>
+        </section>
+
+        <section id="expenses">
+            <h2>5. 支出の記録</h2>
+            <p>支出はカテゴリ分けされており、お金がどこに使われているかを特定するのに役立ちます。支出は個々のメンバーまたは共有の世帯に割り当てることができます。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/expenses_overview.webp" alt="支出の追跡" loading="lazy">
+                <div class="caption">視覚的な円グラフによる内訳を伴う、カテゴリ別の支出リスト。</div>
+            </div>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/trends_expenses_with_history.webp" alt="支出の履歴" loading="lazy">
+                <div class="caption">過去のトレンドデータを使用して支出パターンを分析します。</div>
+            </div>
+            <a href="#" class="back-to-top">↑ メニューに戻る</a>
+        </section>
+
+        <section id="goals">
+            <h2>6. 目標と予算の管理</h2>
+            <p><strong>目標</strong>セクションは、将来の夢のために貯蓄するだけでなく、予算を通じて支出を制限するための強力なツールです。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_overview_with_transaction_log.webp" alt="目標の概要" loading="lazy">
+                <div class="caption">進捗バーと最近の取引を表示するメインの目標画面。</div>
+            </div>
+
+            <h3>貯蓄目標の作成</h3>
+            <p>貯蓄目標を作成する際、目標金額を設定したり、予想される利息を含めたりすることができます。進捗バーが埋まっていくのを見ることで、モチベーションを維持できます。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_goal_with_target.webp" alt="貯蓄目標の追加" loading="lazy">
+                <div class="caption">特定の目標を設定して、新しい貯蓄目標をセットアップします。</div>
+            </div>
+
+            <h3>予算の作成</h3>
+            <p>予算は「逆の」目標です。目標に向かって貯蓄する代わりに、特定のカテゴリまたは期間の制限を設定します。制限に近づくとアプリが警告します。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_budget.webp" alt="予算の追加" loading="lazy">
+                <div class="caption">予算の最大支出制限を定義します。</div>
+            </div>
+
+            <h3>進捗の管理</h3>
+            <p>取引を手動で追加するか、定期的な貯蓄や毎月の予算リセットのために<strong>繰り返し取引</strong>を設定します。</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_transaction_recurring.webp" alt="繰り返し取引" loading="lazy">
+                <div class="caption">繰り返しの目標取引で財務を自動化します。</div>
+            </div>
+
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_edit_goal_add_interest.webp" alt="利息の追加" loading="lazy">
+                <div class="caption">利息の支払いを記録して、貯蓄がより速く増えるのを確認します。</div>
+            </div>
+
+            <h3>マイルストーンとトレンド</h3>
+            <p>進捗を祝いましょう！予算の「半分経過」や貯蓄の「あと少し」などのマイルストーンに達すると、アプリがフィードバックを提供します。</p>
+            <div style="display: flex; gap: 8px; margin: 24px 0;">
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/goals_milestone_savings_almost_there.webp" alt="貯蓄のマイルストーン">
+                </div>
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/goals_milestone_budget_halfway_through.webp" alt="予算のマイルストーン">
+                </div>
+            </div>
+
+            <p><strong>トレンド</strong>ビューを使用すると、取引履歴に基づいて、貯蓄の予測完了日や予算の残り日数を確認できます。</p>
+            <div style="display: flex; gap: 8px; margin: 24px 0;">
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/trends_goals_with_savings.webp" alt="貯蓄のトレンド">
+                </div>
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/trends_goals_with_budget.webp" alt="予算のトレンド">
+                </div>
+            </div>
+
+            <a href="#" class="back-to-top">↑ メニューに戻る</a>
+        </section>
+
+        <section id="calculations">
+            <h2>7. 負担モデル</h2>
+            <p>世帯の価値観に合った戦略を選択してください。設定でいつでも変更できます。</p>
+            <table>
+                <tr><th>モデル</th><th>説明</th></tr>
+                <tr><td><strong>50/50 折半</strong></td><td>収入に関係なく、全員で均等に負担します。</td></tr>
+                <tr><td><strong>相対的割合</strong></td><td>各メンバーの総収入に対する割合に比例します。</td></tr>
+                <tr><td><strong>固定額</strong></td><td>各メンバーが一定額を保持し、残りを共通の財布に入れます。</td></tr>
+                <tr><td><strong>共同口座</strong></td><td>すべての収入を一つの財布に入れ、すべての支出をそこから支払います。</td></tr>
+            </table>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/settings_strategy_and_general.webp" alt="設定の概要" loading="lazy">
+                <div class="caption">タップ一つで分担戦略を切り替えられます。</div>
+            </div>
+            <a href="#" class="back-to-top">↑ メニューに戻る</a>
+        </section>
+
+        <section id="settings">
+            <h2>8. 設定とセキュリティ</h2>
+            <p>プライバシーは最優先事項です。すべてのデータはSQLCipherを使用して暗号化され、デバイスのみに保存されます。開発者が財務データを見ることはありません。</p>
+            <ul>
+                <li><strong>生体認証:</strong> セキュリティを強化するために、指紋認証や顔認証を有効にします。</li>
+                <li><strong>データ管理:</strong> 外部分析用にCSVでエクスポートしたり、暗号化されたバックアップを作成したりします。</li>
+                <li><strong>ローカライズ:</strong> 通貨記号やアプリの言語をカスタマイズします。</li>
+            </ul>
+            <a href="#" class="back-to-top">↑ メニューに戻る</a>
+        </section>
+
+        <section id="best-practices">
+            <h2>9. ベストプラクティス</h2>
+            <div class="tip">
+                <strong>プロのアドバイス:</strong> 食費や光熱費など、世帯全体に利益をもたらす支出には「共有メンバー」を使用してください。
+            </div>
+            <ul>
+                <li><strong>頻度が重要:</strong> 「世帯の概要」で正確に比較するために、すべての収入と支出を同じ頻度（例：毎月）に設定してください。</li>
+                <li><strong>トレンドを確認:</strong> 月に一度トレンドセクションを確認し、支出習慣が変化していないか見てみましょう。</li>
+                <li><strong>こまめなバックアップ:</strong> データはローカルに保存されるため、デバイスの紛失はデータの紛失を意味します。暗号化バックアップ機能を定期的に使用してください！</li>
+            </ul>
+            <a href="#" class="back-to-top">↑ メニューに戻る</a>
+        </section>
+    </main>
+</body>
+</html>

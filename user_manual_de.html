@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="de" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Haushaltsfinanzen App - Benutzerhandbuch</title>
+    <style>
+        :root {
+            --primary-color: #6750A4;
+            --secondary-color: #F3EDF7;
+            --text-color: #1C1B1F;
+            --bg-color: #FFFBFE;
+            --surface-variant: #E7E0EC;
+        }
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 24px 16px;
+            text-align: center;
+        }
+        nav {
+            background-color: var(--secondary-color);
+            padding: 16px;
+            margin-bottom: 24px;
+            border-bottom: 1px solid var(--surface-variant);
+        }
+        nav h2 {
+            font-size: 1.1rem;
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-size: 0.85rem;
+            font-weight: 500;
+            display: block;
+            padding: 10px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid var(--surface-variant);
+            text-align: center;
+        }
+        main {
+            padding: 0 16px 40px 16px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        section {
+            margin-bottom: 48px;
+            scroll-margin-top: 20px;
+        }
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 8px;
+            font-size: 1.3rem;
+            margin-top: 32px;
+        }
+        h3 {
+            color: var(--primary-color);
+            font-size: 1.1rem;
+            margin-top: 24px;
+        }
+        .screenshot-container {
+            margin: 24px 0;
+            text-align: center;
+            background: #f8f8f8;
+            padding: 12px;
+            border-radius: 16px;
+        }
+        .screenshot-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto;
+            transform: translateZ(0);
+            background-color: var(--surface-variant);
+        }
+        .caption {
+            margin-top: 12px;
+            font-style: italic;
+            color: #49454F;
+            font-size: 0.85rem;
+        }
+        .tip {
+            background-color: #E3F2FD;
+            border-radius: 12px;
+            padding: 16px;
+            margin: 24px 0;
+            font-size: 0.9rem;
+            border-left: 4px solid #2196F3;
+        }
+        .back-to-top {
+            display: inline-block;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: bold;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 0.85rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 10px;
+            border-bottom: 1px solid var(--surface-variant);
+        }
+        th {
+            background-color: var(--secondary-color);
+            color: var(--primary-color);
+        }
+        .language-selector {
+            margin-top: 12px;
+        }
+        .language-selector select {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--surface-variant);
+            border-radius: 4px;
+            padding: 4px 8px;
+            font-size: 0.8rem;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="margin:0; font-size: 1.4rem;">Benutzerhandbuch</h1>
+        <div class="language-selector">
+            <select onchange="window.location.href=this.value">
+                <option value="user_manual.html">English</option>
+                <option value="user_manual_de.html" selected>Deutsch</option>
+                <option value="user_manual_es.html">Español</option>
+                <option value="user_manual_fr.html">Français</option>
+                <option value="user_manual_it.html">Italiano</option>
+                <option value="user_manual_ja.html">日本語</option>
+                <option value="user_manual_pt.html">Português</option>
+            </select>
+        </div>
+    </header>
+
+    <nav>
+        <h2>Schnellnavigation</h2>
+        <ul>
+            <li><a href="#intro">Einführung</a></li>
+            <li><a href="#getting-started">Erste Schritte</a></li>
+            <li><a href="#members">Mitglieder verwalten</a></li>
+            <li><a href="#income">Einkommen hinzufügen</a></li>
+            <li><a href="#expenses">Ausgaben erfassen</a></li>
+            <li><a href="#goals">Ziele verwalten</a></li>
+            <li><a href="#calculations">Aufteilungsmodelle</a></li>
+            <li><a href="#settings">Einstellungen</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="intro">
+            <h2>1. Einführung</h2>
+            <p>Willkommen bei der Haushaltsfinanzen-App! Dieses Tool hilft Haushalten, gemeinsame Finanzen transparent zu verwalten. Egal, ob Sie die Miete 50/50 teilen oder komplexe relative Aufteilungen nutzen, wir übernehmen die Mathematik, damit Sie sich auf Ihre Ziele konzentrieren können.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/drawer_overview.webp" alt="App-Drawer" loading="lazy">
+                <div class="caption">Navigieren Sie schnell zwischen allen wichtigen Funktionen über das Seitenmenü.</div>
+            </div>
+        </section>
+
+        <section id="getting-started">
+            <h2>2. Erste Schritte</h2>
+            <p>Die <strong>Haushaltsübersicht</strong> ist Ihr zentraler Hub für den „großen Überblick“. Sie zeigt eine Zusammenfassung der Einkommen, Ausgaben und vor allem den berechneten Beitrag für jedes Mitglied basierend auf der gewählten Strategie.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/household_overview.webp" alt="Haushaltsübersicht" loading="lazy">
+                <div class="caption">Der Haushaltsübersicht-Bildschirm mit einer konsolidierten Finanzzusammenfassung.</div>
+            </div>
+            <a href="#" class="back-to-top">↑ Zurück zum Menü</a>
+        </section>
+
+        <section id="members">
+            <h2>3. Mitglieder verwalten</h2>
+            <p>Um ein neues Mitglied hinzuzufügen, tippen Sie auf die <strong>+</strong> Taste im Haushaltsbildschirm. Mitglieder sind die Grundlage aller Berechnungen.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/household_add_member.webp" alt="Mitglied hinzufügen" loading="lazy">
+                <div class="caption">Hinzufügen eines neuen Mitglieds mit individuellem Namen und Farbe.</div>
+            </div>
+            <p><strong>Reguläre Mitglieder:</strong> In der Regel die Hauptverdiener, deren Einkommen zur Berechnung der Aufteilungsverhältnisse verwendet wird.<br>
+            <strong>Spezielle Mitglieder:</strong> Für Abhängige oder gemeinsame Töpfe (z.B. ein „Gemeinschaftskonto“). Deren Einkommen (Taschengeld, Kindergeld) wird von den Gesamtausgaben abgezogen, bevor die Aufteilung berechnet wird.</p>
+            <a href="#" class="back-to-top">↑ Zurück zum Menü</a>
+        </section>
+
+        <section id="income">
+            <h2>4. Einkommen hinzufügen</h2>
+            <p>Verfolgen Sie alle Einnahmequellen im Bereich <strong>Einkommen</strong>. Sie sehen eine Aufschlüsselung, wer wie viel zum Haushaltsbudget beiträgt.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/income_overview.webp" alt="Einkommensübersicht" loading="lazy">
+                <div class="caption">Aufschlüsselung des Einkommens nach Mitglied und Kategorie.</div>
+            </div>
+            <h3>Einkommenstrends</h3>
+            <p>Die App protokolliert Ihren Finanzverlauf. Das Ändern eines Einkommensbetrags erstellt einen historisierten Datensatz, sodass Sie sehen können, wie sich Ihre Einnahmen im Laufe der Zeit entwickeln.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/trends_income_with_history.webp" alt="Einkommenstrends" loading="lazy">
+                <div class="caption">Sehen Sie sich Ihren Einkommensverlauf und Wachstumstrends an.</div>
+            </div>
+            <a href="#" class="back-to-top">↑ Zurück zum Menü</a>
+        </section>
+
+        <section id="expenses">
+            <h2>5. Ausgaben erfassen</h2>
+            <p>Ausgaben sind kategorisiert, um Ihnen zu helfen, zu erkennen, wohin Ihr Geld fließt. Sie können einzelnen Mitgliedern oder dem gemeinsamen Haushalt zugewiesen werden.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/expenses_overview.webp" alt="Ausgabenübersicht" loading="lazy">
+                <div class="caption">Kategorisierte Ausgabenliste mit visueller Diagramm-Aufschlüsselung.</div>
+            </div>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/trends_expenses_with_history.webp" alt="Ausgabenverlauf" loading="lazy">
+                <div class="caption">Analysieren Sie Ausgabenmuster mit historischen Trenddaten.</div>
+            </div>
+            <a href="#" class="back-to-top">↑ Zurück zum Menü</a>
+        </section>
+
+        <section id="goals">
+            <h2>6. Ziele & Budgets verwalten</h2>
+            <p>Der Bereich <strong>Ziele</strong> ist ein leistungsstarkes Werkzeug, um sowohl für Träume zu sparen als auch Ausgaben über Budgets zu begrenzen.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_overview_with_transaction_log.webp" alt="Zielübersicht" loading="lazy">
+                <div class="caption">Hauptzielbildschirm mit Fortschrittsbalken und letzten Transaktionen.</div>
+            </div>
+
+            <h3>Ein Sparziel erstellen</h3>
+            <p>Beim Erstellen eines Sparziels können Sie einen Zielbetrag festlegen und sogar erwartete Zinsen einbeziehen. Dies hilft Ihnen, motiviert zu bleiben, wenn Sie sehen, wie sich der Fortschrittsbalken füllt.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_goal_with_target.webp" alt="Sparziel hinzufügen" loading="lazy">
+                <div class="caption">Ein neues Sparziel mit einem bestimmten Zielbetrag einrichten.</div>
+            </div>
+
+            <h3>Ein Budget erstellen</h3>
+            <p>Budgets sind „umgekehrte“ Ziele. Anstatt auf ein Ziel hinzusparen, legen Sie ein Limit für eine bestimmte Kategorie oder einen Zeitraum fest. Die App warnt Sie, wenn Sie sich Ihrem Limit nähern.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_budget.webp" alt="Budget hinzufügen" loading="lazy">
+                <div class="caption">Festlegen einer maximalen Ausgabengrenze für ein Budget.</div>
+            </div>
+
+            <h3>Fortschritt verwalten</h3>
+            <p>Fügen Sie Transaktionen manuell hinzu oder richten Sie <strong>wiederkehrende Transaktionen</strong> für regelmäßige Sparbeiträge oder monatliche Budget-Resets ein.</p>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_add_transaction_recurring.webp" alt="Wiederkehrende Transaktion" loading="lazy">
+                <div class="caption">Automatisieren Sie Ihre Finanzen mit wiederkehrenden Ziel-Transaktionen.</div>
+            </div>
+
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/goals_edit_goal_add_interest.webp" alt="Zinsen hinzufügen" loading="lazy">
+                <div class="caption">Protokollieren Sie Zinszahlungen, um Ihre Ersparnisse schneller wachsen zu sehen.</div>
+            </div>
+
+            <h3>Meilensteine & Trends</h3>
+            <p>Feiern Sie Ihren Fortschritt! Die App gibt Rückmeldung, wenn Sie Meilensteine erreichen, z. B. wenn ein Budget „Halb geschafft“ oder ein Sparziel „Fast erreicht“ ist.</p>
+            <div style="display: flex; gap: 8px; margin: 24px 0;">
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/goals_milestone_savings_almost_there.webp" alt="Spar-Meilenstein">
+                </div>
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/goals_milestone_budget_halfway_through.webp" alt="Budget-Meilenstein">
+                </div>
+            </div>
+
+            <p>Verwenden Sie die <strong>Trends</strong>-Ansicht, um prognostizierte Abschlussdaten für Ersparnisse oder verbleibende Tage für ein Budget basierend auf Ihrem Transaktionsverlauf zu sehen.</p>
+            <div style="display: flex; gap: 8px; margin: 24px 0;">
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/trends_goals_with_savings.webp" alt="Spartrends">
+                </div>
+                <div class="screenshot-container" style="flex: 1; margin: 0;">
+                    <img src="file:///android_res/drawable/trends_goals_with_budget.webp" alt="Budgettrends">
+                </div>
+            </div>
+
+            <a href="#" class="back-to-top">↑ Zurück zum Menü</a>
+        </section>
+
+        <section id="calculations">
+            <h2>7. Aufteilungsmodelle</h2>
+            <p>Wählen Sie die Strategie, die zu den Werten Ihres Haushalts passt. Sie können dies jederzeit in den Einstellungen ändern.</p>
+            <table>
+                <tr><th>Modell</th><th>Beschreibung</th></tr>
+                <tr><td><strong>50/50 Aufteilung</strong></td><td>Gleicher Anteil für alle, unabhängig vom Einkommen.</td></tr>
+                <tr><td><strong>Relative Aufteilung</strong></td><td>Proportional zum Anteil jedes Mitglieds am Gesamteinkommen.</td></tr>
+                <tr><td><strong>Fester Betrag</strong></td><td>Jedes Mitglied behält einen festen Betrag; der Rest geht in den gemeinsamen Topf.</td></tr>
+                <tr><td><strong>Gemeinsames Konto</strong></td><td>Alle Einnahmen gehen in einen Topf; alle Ausgaben werden daraus bezahlt.</td></tr>
+            </table>
+            <div class="screenshot-container">
+                <img src="file:///android_res/drawable/settings_strategy_and_general.webp" alt="Einstellungsübersicht" loading="lazy">
+                <div class="caption">Wechseln Sie zwischen Aufteilungsstrategien mit einem einzigen Tippen.</div>
+            </div>
+            <a href="#" class="back-to-top">↑ Zurück zum Menü</a>
+        </section>
+
+        <section id="settings">
+            <h2>8. Einstellungen & Sicherheit</h2>
+            <p>Ihre Privatsphäre ist oberstes Gebot. Alle Daten werden mit SQLCipher verschlüsselt und nur auf Ihrem Gerät gespeichert. Wir haben keinen Zugriff auf Ihre Finanzdaten.</p>
+            <ul>
+                <li><strong>Biometrie:</strong> Aktivieren Sie Fingerabdruck oder Gesichtserkennung für zusätzliche Sicherheit.</li>
+                <li><strong>Datenverwaltung:</strong> Exportieren Sie nach CSV für externe Analysen oder erstellen Sie verschlüsselte Backups.</li>
+                <li><strong>Lokalisierung:</strong> Passen Sie Ihr Währungssymbol und die App-Sprache an.</li>
+            </ul>
+            <a href="#" class="back-to-top">↑ Zurück zum Menü</a>
+        </section>
+
+        <section id="best-practices">
+            <h2>9. Best Practices</h2>
+            <div class="tip">
+                <strong>Pro-Tipp:</strong> Verwenden Sie das „Gemeinsame Mitglied“ für Ausgaben, die dem gesamten Haushalt zugute kommen, wie Lebensmittel oder Nebenkosten.
+            </div>
+            <ul>
+                <li><strong>Häufigkeit zählt:</strong> Stellen Sie sicher, dass alle Einkommen und Ausgaben auf dieselbe Häufigkeit (z. B. Monatlich) eingestellt sind, um einen genauen Vergleich in der „Haushaltsübersicht“ zu erhalten.</li>
+                <li><strong>Trends prüfen:</strong> Schauen Sie sich einmal im Monat den Bereich Trends an, um zu sehen, ob sich Ihre Ausgabengewohnheiten ändern.</li>
+                <li><strong>Regelmäßig sichern:</strong> Da die Daten lokal gespeichert sind, bedeutet ein Geräteverlust auch Datenverlust. Nutzen Sie regelmäßig die Funktion „Verschlüsseltes Backup“!</li>
+            </ul>
+            <a href="#" class="back-to-top">↑ Zurück zum Menü</a>
+        </section>
+    </main>
+</body>
+</html>
