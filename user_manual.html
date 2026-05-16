@@ -149,195 +149,266 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1 style="margin:0; font-size: 1.4rem;">User Manual</h1>
-        <div class="language-selector">
-            <select onchange="window.location.href=this.value">
-                <option value="user_manual.html" selected>English</option>
-                <option value="user_manual_de.html">Deutsch</option>
-                <option value="user_manual_es.html">Español</option>
-                <option value="user_manual_fr.html">Français</option>
-                <option value="user_manual_it.html">Italiano</option>
-                <option value="user_manual_ja.html">日本語</option>
-                <option value="user_manual_pt.html">Português</option>
-            </select>
+<header>
+    <h1 style="margin:0; font-size: 1.4rem;">User Manual</h1>
+    <div class="language-selector">
+        <select onchange="window.location.href=this.value">
+            <option value="user_manual.html" selected>English</option>
+            <option value="user_manual_de.html">Deutsch</option>
+            <option value="user_manual_es.html">Español</option>
+            <option value="user_manual_fr.html">Français</option>
+            <option value="user_manual_it.html">Italiano</option>
+            <option value="user_manual_ja.html">日本語</option>
+            <option value="user_manual_pt.html">Português</option>
+        </select>
+    </div>
+</header>
+
+<nav>
+    <h2>Quick Navigation</h2>
+    <ul>
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#getting-started">Getting Started</a></li>
+        <li><a href="#members">Managing Members</a></li>
+        <li><a href="#income">Adding Income</a></li>
+        <li><a href="#expenses">Tracking Expenses</a></li>
+        <li><a href="#goals">Managing Goals</a></li>
+        <li><a href="#calculations">Split Models</a></li>
+        <li><a href="#settings">Settings</a></li>
+        <li><a href="#import-formats">Import Formats</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="intro">
+        <h2>1. Introduction</h2>
+        <p>Welcome to the Household Finance App! This tool helps households manage shared finances transparently. Whether splitting rent 50/50 or using complex relative splits, we handle the math so you can focus on your goals.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/drawer_overview.webp" alt="App Drawer" loading="lazy">
+            <div class="caption">Navigate quickly between all major features using the side drawer.</div>
         </div>
-    </header>
+    </section>
 
-    <nav>
-        <h2>Quick Navigation</h2>
-        <ul>
-            <li><a href="#intro">Introduction</a></li>
-            <li><a href="#getting-started">Getting Started</a></li>
-            <li><a href="#members">Managing Members</a></li>
-            <li><a href="#income">Adding Income</a></li>
-            <li><a href="#expenses">Tracking Expenses</a></li>
-            <li><a href="#goals">Managing Goals</a></li>
-            <li><a href="#calculations">Split Models</a></li>
-            <li><a href="#settings">Settings</a></li>
-        </ul>
-    </nav>
+    <section id="getting-started">
+        <h2>2. Getting Started</h2>
+        <p>The <strong>Household Overview</strong> is your central hub for seeing the "big picture". It shows a summary of incomes, expenses, and most importantly, the calculated contribution for each member based on your selected strategy.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/household_overview.webp" alt="Household Overview" loading="lazy">
+            <div class="caption">The Household Overview screen showing a consolidated financial summary.</div>
+        </div>
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
 
-    <main>
-        <section id="intro">
-            <h2>1. Introduction</h2>
-            <p>Welcome to the Household Finance App! This tool helps households manage shared finances transparently. Whether splitting rent 50/50 or using complex relative splits, we handle the math so you can focus on your goals.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/drawer_overview.webp" alt="App Drawer" loading="lazy">
-                <div class="caption">Navigate quickly between all major features using the side drawer.</div>
-            </div>
-        </section>
-
-        <section id="getting-started">
-            <h2>2. Getting Started</h2>
-            <p>The <strong>Household Overview</strong> is your central hub for seeing the "big picture". It shows a summary of incomes, expenses, and most importantly, the calculated contribution for each member based on your selected strategy.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/household_overview.webp" alt="Household Overview" loading="lazy">
-                <div class="caption">The Household Overview screen showing a consolidated financial summary.</div>
-            </div>
-            <a href="#" class="back-to-top">↑ Back to Menu</a>
-        </section>
-
-        <section id="members">
-            <h2>3. Managing Members</h2>
-            <p>To add a new member, tap the <strong>+</strong> button on the Household screen. Members are the foundation of all calculations.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/household_add_member.webp" alt="Add Member Screen" loading="lazy">
-                <div class="caption">Adding a new member with a custom name and color.</div>
-            </div>
-            <p><strong>Regular Members:</strong> Typically the main earners whose income is used to calculate split ratios.<br>
+    <section id="members">
+        <h2>3. Managing Members</h2>
+        <p>To add a new member, tap the <strong>+</strong> button on the Household screen. Members are the foundation of all calculations.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/household_add_member.webp" alt="Add Member Screen" loading="lazy">
+            <div class="caption">Adding a new member with a custom name and color.</div>
+        </div>
+        <p><strong>Regular Members:</strong> Typically the main earners whose income is used to calculate split ratios.<br>
             <strong>Special Members:</strong> Used for dependents or shared funds (like a 'Joint Pot'). Their income (allowances, child support) is deducted from total expenses before the split is calculated.</p>
-            <a href="#" class="back-to-top">↑ Back to Menu</a>
-        </section>
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
 
-        <section id="income">
-            <h2>4. Adding Income</h2>
-            <p>Track all sources of revenue in the <strong>Income</strong> section. You can see a breakdown of who contributes what to the household total.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/income_overview.webp" alt="Income Tracking" loading="lazy">
-                <div class="caption">Breakdown of income by member and category.</div>
-            </div>
-            <h3>Income Trends</h3>
-            <p>The app keeps track of your financial history. Changing an income amount creates a historized record, allowing you to see how your earnings evolve over time.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_income_with_history.webp" alt="Income Trends" loading="lazy">
-                <div class="caption">View your income history and growth trends.</div>
-            </div>
-            <a href="#" class="back-to-top">↑ Back to Menu</a>
-        </section>
+    <section id="income">
+        <h2>4. Adding Income</h2>
+        <p>Track all sources of revenue in the <strong>Income</strong> section. You can see a breakdown of who contributes what to the household total.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/income_overview.webp" alt="Income Tracking" loading="lazy">
+            <div class="caption">Breakdown of income by member and category.</div>
+        </div>
+        <h3>Income Trends</h3>
+        <p>The app keeps track of your financial history. Changing an income amount creates a historized record, allowing you to see how your earnings evolve over time.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_income_with_history.webp" alt="Income Trends" loading="lazy">
+            <div class="caption">View your income history and growth trends.</div>
+        </div>
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
 
-        <section id="expenses">
-            <h2>5. Tracking Expenses</h2>
-            <p>Expenses are categorized to help you identify where your money goes. They can be assigned to individual members or the shared household.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/expenses_overview.webp" alt="Expense Tracking" loading="lazy">
-                <div class="caption">Categorized expense list with a visual pie chart breakdown.</div>
-            </div>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_expenses_with_history.webp" alt="Expense History" loading="lazy">
-                <div class="caption">Analyze spending patterns with historical trend data.</div>
-            </div>
-            <a href="#" class="back-to-top">↑ Back to Menu</a>
-        </section>
+    <section id="expenses">
+        <h2>5. Tracking Expenses</h2>
+        <p>Expenses are categorized to help you identify where your money goes. They can be assigned to individual members or the shared household.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/expenses_overview.webp" alt="Expense Tracking" loading="lazy">
+            <div class="caption">Categorized expense list with a visual pie chart breakdown.</div>
+        </div>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_expenses_with_history.webp" alt="Expense History" loading="lazy">
+            <div class="caption">Analyze spending patterns with historical trend data.</div>
+        </div>
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
 
-        <section id="goals">
-            <h2>6. Managing Goals & Budgets</h2>
-            <p>The <strong>Goals</strong> section is a powerful tool for both saving up for dreams and limiting spending via budgets.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_overview_with_transaction_log.webp" alt="Goals Overview" loading="lazy">
-                <div class="caption">Main goals screen showing progress bars and recent transactions.</div>
+    <section id="goals">
+        <h2>6. Managing Goals & Budgets</h2>
+        <p>The <strong>Goals</strong> section is a powerful tool for both saving up for dreams and limiting spending via budgets.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_overview_with_transaction_log.webp" alt="Goals Overview" loading="lazy">
+            <div class="caption">Main goals screen showing progress bars and recent transactions.</div>
+        </div>
+
+        <h3>Creating a Savings Goal</h3>
+        <p>When creating a savings goal, you can set a target amount and even include expected interest. This helps you stay motivated as you see the progress bar fill up.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_goal_with_target.webp" alt="Add Savings Goal" loading="lazy">
+            <div class="caption">Setting up a new savings goal with a specific target.</div>
+        </div>
+
+        <h3>Creating a Budget</h3>
+        <p>Budgets are "inverted" goals. Instead of saving up to a target, you set a limit for a specific category or period. The app warns you as you approach your limit.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_budget.webp" alt="Add Budget" loading="lazy">
+            <div class="caption">Defining a maximum spending limit for a budget.</div>
+        </div>
+
+        <h3>Managing Progress</h3>
+        <p>Add transactions manually or set up <strong>Recurring Transactions</strong> for regular savings contributions or monthly budget resets.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_transaction_recurring.webp" alt="Recurring Transaction" loading="lazy">
+            <div class="caption">Automate your finances with recurring goal transactions.</div>
+        </div>
+
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_edit_goal_add_interest.webp" alt="Add Interest" loading="lazy">
+            <div class="caption">Log interest payments to see your savings grow faster.</div>
+        </div>
+
+        <h3>Milestones & Trends</h3>
+        <p>Celebrate your progress! The app provides feedback when you reach milestones like being "Halfway Through" a budget or "Almost There" with your savings.</p>
+        <div style="display: flex; gap: 8px; margin: 24px 0;">
+            <div class="screenshot-container" style="flex: 1; margin: 0;">
+                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_milestone_savings_almost_there.webp" alt="Savings Milestone">
             </div>
-
-            <h3>Creating a Savings Goal</h3>
-            <p>When creating a savings goal, you can set a target amount and even include expected interest. This helps you stay motivated as you see the progress bar fill up.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_goal_with_target.webp" alt="Add Savings Goal" loading="lazy">
-                <div class="caption">Setting up a new savings goal with a specific target.</div>
+            <div class="screenshot-container" style="flex: 1; margin: 0;">
+                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_milestone_budget_halfway_through.webp" alt="Budget Milestone">
             </div>
+        </div>
 
-            <h3>Creating a Budget</h3>
-            <p>Budgets are "inverted" goals. Instead of saving up to a target, you set a limit for a specific category or period. The app warns you as you approach your limit.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_budget.webp" alt="Add Budget" loading="lazy">
-                <div class="caption">Defining a maximum spending limit for a budget.</div>
+        <p>Use the <strong>Trends</strong> view to see forecasted completion dates for savings or remaining days for a budget based on your transaction history.</p>
+        <div style="display: flex; gap: 8px; margin: 24px 0;">
+            <div class="screenshot-container" style="flex: 1; margin: 0;">
+                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_goals_with_savings.webp" alt="Savings Trends">
             </div>
-
-            <h3>Managing Progress</h3>
-            <p>Add transactions manually or set up <strong>Recurring Transactions</strong> for regular savings contributions or monthly budget resets.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_transaction_recurring.webp" alt="Recurring Transaction" loading="lazy">
-                <div class="caption">Automate your finances with recurring goal transactions.</div>
+            <div class="screenshot-container" style="flex: 1; margin: 0;">
+                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_goals_with_budget.webp" alt="Budget Trends">
             </div>
+        </div>
 
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_edit_goal_add_interest.webp" alt="Add Interest" loading="lazy">
-                <div class="caption">Log interest payments to see your savings grow faster.</div>
-            </div>
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
 
-            <h3>Milestones & Trends</h3>
-            <p>Celebrate your progress! The app provides feedback when you reach milestones like being "Halfway Through" a budget or "Almost There" with your savings.</p>
-            <div style="display: flex; gap: 8px; margin: 24px 0;">
-                <div class="screenshot-container" style="flex: 1; margin: 0;">
-                    <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_milestone_savings_almost_there.webp" alt="Savings Milestone">
-                </div>
-                <div class="screenshot-container" style="flex: 1; margin: 0;">
-                    <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_milestone_budget_halfway_through.webp" alt="Budget Milestone">
-                </div>
-            </div>
+    <section id="calculations">
+        <h2>7. Contribution Models</h2>
+        <p>Choose the strategy that fits your household's values. You can change this at any time in the settings.</p>
+        <table>
+            <tr><th>Model</th><th>Description</th></tr>
+            <tr><td><strong>50/50 Split</strong></td><td>Equal share for everyone, regardless of income.</td></tr>
+            <tr><td><strong>Relative Split</strong></td><td>Proportional to each member's share of total income.</td></tr>
+            <tr><td><strong>Fixed Amount</strong></td><td>Each member keeps a fixed sum; the rest goes into the shared pot.</td></tr>
+            <tr><td><strong>Joint Account</strong></td><td>All income goes into one pot; all expenses come out.</td></tr>
+        </table>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/settings_strategy_and_general.webp" alt="Settings Overview" loading="lazy">
+            <div class="caption">Switch between contribution strategies with a single tap.</div>
+        </div>
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
 
-            <p>Use the <strong>Trends</strong> view to see forecasted completion dates for savings or remaining days for a budget based on your transaction history.</p>
-            <div style="display: flex; gap: 8px; margin: 24px 0;">
-                <div class="screenshot-container" style="flex: 1; margin: 0;">
-                    <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_goals_with_savings.webp" alt="Savings Trends">
-                </div>
-                <div class="screenshot-container" style="flex: 1; margin: 0;">
-                    <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_goals_with_budget.webp" alt="Budget Trends">
-                </div>
-            </div>
+    <section id="settings">
+        <h2>8. Settings & Security</h2>
+        <p>Your privacy is paramount. All data is encrypted using SQLCipher and stored only on your device. We never see your financial data.</p>
+        <ul>
+            <li><strong>Biometrics:</strong> Enable Fingerprint or Face Unlock for extra security.</li>
+            <li><strong>Data Management:</strong> Export to CSV for external analysis or create encrypted backups.</li>
+            <li><strong>Localization:</strong> Customize your currency symbol and app language.</li>
+        </ul>
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
 
-            <a href="#" class="back-to-top">↑ Back to Menu</a>
-        </section>
+    <section id="best-practices">
+        <h2>9. Best Practices</h2>
+        <div class="tip">
+            <strong>Pro Tip:</strong> Use the "Shared Member" for expenses that benefit the whole household, like groceries or utilities.
+        </div>
+        <ul>
+            <li><strong>Frequency Matters:</strong> Ensure all incomes and expenses are set to the same frequency (e.g., Monthly) for the most accurate "Household Overview" comparison.</li>
+            <li><strong>Review Trends:</strong> Check the Trends section once a month to see if your spending habits are shifting.</li>
+            <li><strong>Backup Often:</strong> Since data is local, a device loss means data loss. Use the Encrypted Backup feature regularly!</li>
+        </ul>
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
 
-        <section id="calculations">
-            <h2>7. Contribution Models</h2>
-            <p>Choose the strategy that fits your household's values. You can change this at any time in the settings.</p>
-            <table>
-                <tr><th>Model</th><th>Description</th></tr>
-                <tr><td><strong>50/50 Split</strong></td><td>Equal share for everyone, regardless of income.</td></tr>
-                <tr><td><strong>Relative Split</strong></td><td>Proportional to each member's share of total income.</td></tr>
-                <tr><td><strong>Fixed Amount</strong></td><td>Each member keeps a fixed sum; the rest goes into the shared pot.</td></tr>
-                <tr><td><strong>Joint Account</strong></td><td>All income goes into one pot; all expenses come out.</td></tr>
-            </table>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/settings_strategy_and_general.webp" alt="Settings Overview" loading="lazy">
-                <div class="caption">Switch between contribution strategies with a single tap.</div>
-            </div>
-            <a href="#" class="back-to-top">↑ Back to Menu</a>
-        </section>
+    <section id="import-formats">
+        <h2>10. Technical Guide: CSV Import Formats</h2>
+        <p>The app allows you to import data using comma-separated values (CSV). All imports require an exact header on the first line. Below are the required columns, data types, and examples for each import type.</p>
 
-        <section id="settings">
-            <h2>8. Settings & Security</h2>
-            <p>Your privacy is paramount. All data is encrypted using SQLCipher and stored only on your device. We never see your financial data.</p>
-            <ul>
-                <li><strong>Biometrics:</strong> Enable Fingerprint or Face Unlock for extra security.</li>
-                <li><strong>Data Management:</strong> Export to CSV for external analysis or create encrypted backups.</li>
-                <li><strong>Localization:</strong> Customize your currency symbol and app language.</li>
-            </ul>
-            <a href="#" class="back-to-top">↑ Back to Menu</a>
-        </section>
+        <h3>Common Data Types</h3>
+        <ul>
+            <li><strong>Amount:</strong> Decimal numbers. Use a period (.) or comma (,) as a decimal separator. Thousand separators are automatically stripped. Examples: <code>1000.50</code>, <code>1000,50</code>, <code>1,000.50</code>.</li>
+            <li><strong>Date:</strong> Must be in ISO 8601 format (<code>YYYY-MM-DD</code>). If empty, the current date is used. Example: <code>2023-10-24</code>.</li>
+            <li><strong>FrequencyFactor:</strong> A multiplier representing how often an entry occurs per month. One-time = <code>0.0</code>, Weekly = <code>4.33</code>, Monthly = <code>1.0</code>, Yearly = <code>0.0833</code>.</li>
+            <li><strong>Color:</strong> A 32-bit ARGB Long integer representing the hex color. Example: <code>4284612846</code> (which is 0xFF6200EE).</li>
+            <li><strong>Boolean:</strong> <code>true</code> or <code>false</code>.</li>
+        </ul>
 
-        <section id="best-practices">
-            <h2>9. Best Practices</h2>
-            <div class="tip">
-                <strong>Pro Tip:</strong> Use the "Shared Member" for expenses that benefit the whole household, like groceries or utilities.
-            </div>
-            <ul>
-                <li><strong>Frequency Matters:</strong> Ensure all incomes and expenses are set to the same frequency (e.g., Monthly) for the most accurate "Household Overview" comparison.</li>
-                <li><strong>Review Trends:</strong> Check the Trends section once a month to see if your spending habits are shifting.</li>
-                <li><strong>Backup Often:</strong> Since data is local, a device loss means data loss. Use the Encrypted Backup feature regularly!</li>
-            </ul>
-            <a href="#" class="back-to-top">↑ Back to Menu</a>
-        </section>
-    </main>
+        <h3>Members</h3>
+        <p><strong>Header:</strong> <code>Name, Type, Color</code></p>
+        <p><strong>Rules:</strong> Type 1 = Regular, Type 2 = Special, Type 3 = Joint Pot.</p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+Name, Type, Color<br>
+Alice, 1, 4284612846<br>
+Bob, 1, 4278224128<br>
+Kids Fund, 2, 4294951115
+        </div>
+
+        <h3>Incomes</h3>
+        <p><strong>Header:</strong> <code>MemberName, Amount, Description, FrequencyFactor, Date</code></p>
+        <p><strong>Rules:</strong> <code>MemberName</code> must perfectly match an existing member.</p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+MemberName, Amount, Description, FrequencyFactor, Date<br>
+Alice, 5000.00, Primary Salary, 1.0, 2023-10-25<br>
+Bob, 300.50, Freelance, 0.0, 2023-10-26
+        </div>
+
+        <h3>Expenses</h3>
+        <p><strong>Header:</strong> <code>MemberName, CategoryName, Amount, Description, FrequencyFactor, Date</code></p>
+        <p><strong>Rules:</strong> If <code>CategoryName</code> does not exist, it will be automatically created.</p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+MemberName, CategoryName, Amount, Description, FrequencyFactor, Date<br>
+Alice, Rent, 1500.00, November Rent, 1.0, 2023-11-01<br>
+Bob, Groceries, 120.45, Weekend Shopping, 0.0, 2023-11-05
+        </div>
+
+        <h3>Categories</h3>
+        <p><strong>Header:</strong> <code>Name</code></p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+Name<br>
+Groceries<br>
+Utilities<br>
+Entertainment
+        </div>
+
+        <h3>Goals</h3>
+        <p><strong>Header:</strong> <code>Name, TargetAmount, Color, Date, MemberName, IsBudget, HasInterest, AnnualInterestRate</code></p>
+        <p><strong>Rules:</strong> <code>IsBudget</code> determines if the goal operates as a budget limit.</p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+Name, TargetAmount, Color, Date, MemberName, IsBudget, HasInterest, AnnualInterestRate<br>
+Vacation, 3000.00, 4284612846, 2023-01-01, Alice, false, false, 0.0<br>
+Monthly Food, 600.00, 4294901760, 2023-10-01, , true, false, 0.0
+        </div>
+
+        <h3>Goal Transactions</h3>
+        <p><strong>Header:</strong> <code>GoalName, Amount, Note, FrequencyFactor, Date</code></p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+GoalName, Amount, Note, FrequencyFactor, Date<br>
+Vacation, 200.00, October Savings, 1.0, 2023-10-28<br>
+Monthly Food, 55.30, Supermarket, 0.0, 2023-11-02
+        </div>
+
+        <a href="#" class="back-to-top">↑ Back to Menu</a>
+    </section>
+</main>
 </body>
 </html>
