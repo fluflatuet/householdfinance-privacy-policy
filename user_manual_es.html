@@ -149,195 +149,266 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1 style="margin:0; font-size: 1.4rem;">Manual de Usuario</h1>
-        <div class="language-selector">
-            <select onchange="window.location.href=this.value">
-                <option value="user_manual.html">English</option>
-                <option value="user_manual_de.html">Deutsch</option>
-                <option value="user_manual_es.html" selected>Español</option>
-                <option value="user_manual_fr.html">Français</option>
-                <option value="user_manual_it.html">Italiano</option>
-                <option value="user_manual_ja.html">日本語</option>
-                <option value="user_manual_pt.html">Português</option>
-            </select>
+<header>
+    <h1 style="margin:0; font-size: 1.4rem;">Manual de Usuario</h1>
+    <div class="language-selector">
+        <select onchange="window.location.href=this.value">
+            <option value="user_manual.html">English</option>
+            <option value="user_manual_de.html">Deutsch</option>
+            <option value="user_manual_es.html" selected>Español</option>
+            <option value="user_manual_fr.html">Français</option>
+            <option value="user_manual_it.html">Italiano</option>
+            <option value="user_manual_ja.html">日本語</option>
+            <option value="user_manual_pt.html">Português</option>
+        </select>
+    </div>
+</header>
+
+<nav>
+    <h2>Navegación Rápida</h2>
+    <ul>
+        <li><a href="#intro">Introducción</a></li>
+        <li><a href="#getting-started">Primeros Pasos</a></li>
+        <li><a href="#members">Gestionar Miembros</a></li>
+        <li><a href="#income">Añadir Ingresos</a></li>
+        <li><a href="#expenses">Control de Gastos</a></li>
+        <li><a href="#goals">Gestionar Objetivos</a></li>
+        <li><a href="#calculations">Modelos de Distribución</a></li>
+        <li><a href="#settings">Configuración</a></li>
+        <li><a href="#import-formats">Formatos de Importación</a></li>
+    </ul>
+</nav>
+
+<main>
+    <section id="intro">
+        <h2>1. Introducción</h2>
+        <p>¡Te damos la bienvenida a la App de Finanzas del Hogar! Esta herramienta ayuda a los hogares a gestionar las finanzas compartidas de forma transparente. Ya sea que dividan el alquiler al 50/50 o utilicen distribuciones proporcionales complejas, nosotros nos encargamos de las matemáticas para que tú puedas concentrarte en tus objetivos.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/drawer_overview.webp" alt="Menú lateral de la aplicación" loading="lazy">
+            <div class="caption">Navega rápidamente entre las funciones principales utilizando el menú lateral desplegable.</div>
         </div>
-    </header>
+    </section>
 
-    <nav>
-        <h2>Navegación Rápida</h2>
+    <section id="getting-started">
+        <h2>2. Primeros Pasos</h2>
+        <p>La <strong>Vista General del Hogar</strong> es tu panel central para ver la "visión de conjunto". Muestra un resumen de los ingresos, los gastos y, lo más importante, la contribución calculada para cada miembro según la estrategia que hayas seleccionado.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/household_overview.webp" alt="Vista General del Hogar" loading="lazy">
+            <div class="caption">La pantalla de Vista General del Hogar muestra un resumen financiero consolidado.</div>
+        </div>
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
+
+    <section id="members">
+        <h2>3. Gestionar Miembros</h2>
+        <p>Para añadir un nuevo miembro, pulsa el botón <strong>+</strong> en la pantalla del Hogar. Los miembros son la base de todos los cálculos.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/household_add_member.webp" alt="Pantalla Añadir Miembro" loading="lazy">
+            <div class="caption">Añadir un nuevo miembro con un nombre y color personalizados.</div>
+        </div>
+        <p><strong>Miembros Regulares:</strong> Normalmente son quienes aportan los ingresos principales que se utilizan para calcular los porcentajes de distribución.<br>
+            <strong>Miembros Especiales:</strong> Se utilizan para dependientes o fondos compartidos (como un "Fondo Común"). Sus ingresos (pagas, manutención infantil) se deducen de los gastos totales antes de calcular la distribución.</p>
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
+
+    <section id="income">
+        <h2>4. Añadir Ingresos</h2>
+        <p>Realiza un seguimiento de todas las fuentes de ingresos en la sección de <strong>Ingresos</strong>. Puedes ver un desglose de quién aporta qué al total del hogar.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/income_overview.webp" alt="Control de Ingresos" loading="lazy">
+            <div class="caption">Desglose de ingresos por miembro y categoría.</div>
+        </div>
+        <h3>Tendencias de Ingresos</h3>
+        <p>La aplicación realiza un seguimiento de tu historial financiero. Al cambiar el importe de un ingreso se crea un registro histórico, lo que te permite ver cómo evolucionan tus ganancias a lo largo del tiempo.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_income_with_history.webp" alt="Tendencias de Ingresos" loading="lazy">
+            <div class="caption">Visualiza tu historial de ingresos y las tendencias de crecimiento.</div>
+        </div>
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
+
+    <section id="expenses">
+        <h2>5. Control de Gastos</h2>
+        <p>Los gastos se clasifican por categorías para ayudarte a identificar a dónde va tu dinero. Se pueden asignar a miembros individuales o al fondo compartido del hogar.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/expenses_overview.webp" alt="Control de Gastos" loading="lazy">
+            <div class="caption">Lista de gastos categorizados con un gráfico circular visual para su desglose.</div>
+        </div>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_expenses_with_history.webp" alt="Historial de Gastos" loading="lazy">
+            <div class="caption">Analiza los patrones de gasto con los datos de tendencias históricas.</div>
+        </div>
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
+
+    <section id="goals">
+        <h2>6. Gestionar Objetivos y Presupuestos</h2>
+        <p>La sección de <strong>Objetivos</strong> es una herramienta potente tanto para ahorrar para tus sueños como para limitar los gastos mediante presupuestos.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_overview_with_transaction_log.webp" alt="Vista General de Objetivos" loading="lazy">
+            <div class="caption">Pantalla principal de objetivos que muestra las barras de progreso y las transacciones recientes.</div>
+        </div>
+
+        <h3>Crear un Objetivo de Ahorro</h3>
+        <p>Al crear un objetivo de ahorro, puedes establecer una cantidad meta e incluso incluir los intereses previstos. Esto te ayuda a mantener la motivación mientras ves cómo se llena la barra de progreso.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_goal_with_target.webp" alt="Añadir Objetivo de Ahorro" loading="lazy">
+            <div class="caption">Configuración de un nuevo objetivo de ahorro con una meta específica.</div>
+        </div>
+
+        <h3>Crear un Presupuesto</h3>
+        <p>Los presupuestos son objetivos "invertidos". En lugar de ahorrar para alcanzar una meta, estableces un límite para una categoría o período específico. La aplicación te avisará a medida que te acerques a dicho límite.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_budget.webp" alt="Añadir Presupuesto" loading="lazy">
+            <div class="caption">Definición de un límite máximo de gasto para un presupuesto.</div>
+        </div>
+
+        <h3>Gestionar el Progreso</h3>
+        <p>Añade transacciones manualmente o configura <strong>Transacciones Recurrentes</strong> para aportaciones periódicas de ahorro o reinicios mensuales del presupuesto.</p>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_transaction_recurring.webp" alt="Transación Recurrente" loading="lazy">
+            <div class="caption">Automatiza tus finanzas con transacciones recurrentes en tus objetivos.</div>
+        </div>
+
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_edit_goal_add_interest.webp" alt="Añadir Intereses" loading="lazy">
+            <div class="caption">Registra los pagos de intereses para ver crecer tus ahorros más rápido.</div>
+        </div>
+
+        <h3>Logros y Tendencias</h3>
+        <p>¡Celebra tu progreso! La aplicación te ofrece comentarios cuando alcanzas hitos, como estar a la "Mitad del camino" de un presupuesto o "Casi allí" con tus ahorros.</p>
+        <div style="display: flex; gap: 8px; margin: 24px 0;">
+            <div class="screenshot-container" style="flex: 1; margin: 0;">
+                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_milestone_savings_almost_there.webp" alt="Hito de Ahorros">
+            </div>
+            <div class="screenshot-container" style="flex: 1; margin: 0;">
+                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_milestone_budget_halfway_through.webp" alt="Hito de Presupuesto">
+            </div>
+        </div>
+
+        <p>Utiliza la vista de <strong>Tendencias</strong> para ver las fechas estimadas de finalización de tus ahorros o los días restantes de un presupuesto basándote en tu historial de transacciones.</p>
+        <div style="display: flex; gap: 8px; margin: 24px 0;">
+            <div class="screenshot-container" style="flex: 1; margin: 0;">
+                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_goals_with_savings.webp" alt="Tendencias de Ahorro">
+            </div>
+            <div class="screenshot-container" style="flex: 1; margin: 0;">
+                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_goals_with_budget.webp" alt="Tendencias de Presupuesto">
+            </div>
+        </div>
+
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
+
+    <section id="calculations">
+        <h2>7. Modelos de Contribución</h2>
+        <p>Elige la estrategia que mejor se adapte a los valores de tu hogar. Puedes cambiarla en cualquier momento desde los ajustes.</p>
+        <table>
+            <tr><th>Modelo</th><th>Descripción</th></tr>
+            <tr><td><strong>División 50/50</strong></td><td>Partes iguales para todos, independientemente de los ingresos.</td></tr>
+            <tr><td><strong>División Proporcional</strong></td><td>Proporcional a la parte de los ingresos totales de cada miembro.</td></tr>
+            <tr><td><strong>Cantidad Fija</strong></td><td>Cada miembro se queda con una suma fija; el resto va al fondo común.</td></tr>
+            <tr><td><strong>Cuenta Conjunta</strong></td><td>Todos los ingresos van a un solo fondo y todos los gastos salen de ahí.</td></tr>
+        </table>
+        <div class="screenshot-container">
+            <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/settings_strategy_and_general.webp" alt="Vista General de Ajustes" loading="lazy">
+            <div class="caption">Cambia entre las diferentes estrategias de contribución con un solo toque.</div>
+        </div>
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
+
+    <section id="settings">
+        <h2>8. Ajustes y Seguridad</h2>
+        <p>Tu privacidad es lo más importante. Todos los datos se cifran mediante SQLCipher y se almacenan únicamente en tu dispositivo. Nosotros nunca vemos tus datos financieros.</p>
         <ul>
-            <li><a href="#intro">Introducción</a></li>
-            <li><a href="#getting-started">Primeros Pasos</a></li>
-            <li><a href="#members">Gestión de Miembros</a></li>
-            <li><a href="#income">Añadir Ingresos</a></li>
-            <li><a href="#expenses">Seguimiento de Gastos</a></li>
-            <li><a href="#goals">Gestión de Objetivos</a></li>
-            <li><a href="#calculations">Modelos de Reparto</a></li>
-            <li><a href="#settings">Configuración</a></li>
+            <li><strong>Biometría:</strong> Activa el desbloqueo por huella dactilar o reconocimiento facial para mayor seguridad.</li>
+            <li><strong>Gestión de Datos:</strong> Exporta a CSV para análisis externos o crea copias de seguridad cifradas.</li>
+            <li><strong>Localización:</strong> Personaliza el símbolo de tu moneda y el idioma de la aplicación.</li>
         </ul>
-    </nav>
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
 
-    <main>
-        <section id="intro">
-            <h2>1. Introducción</h2>
-            <p>¡Bienvenido a la App de Finanzas del Hogar! Esta herramienta ayuda a las familias a gestionar sus finanzas compartidas de forma transparente. Ya sea dividiendo el alquiler al 50/50 o usando repartos complejos, nosotros nos encargamos de las cuentas para que tú puedas centrarte en tus metas.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/drawer_overview.webp" alt="Menú Lateral de la App" loading="lazy">
-                <div class="caption">Navega rápidamente entre todas las funciones principales usando el menú lateral.</div>
-            </div>
-        </section>
+    <section id="best-practices">
+        <h2>9. Buenas Prácticas</h2>
+        <div class="tip">
+            <strong>Consejo Pro:</strong> Utiliza el "Miembro Compartido" para los gastos que beneficien a todo el hogar, como la compra de alimentos o los servicios públicos.
+        </div>
+        <ul>
+            <li><strong>La frecuencia importa:</strong> Asegúrate de que todos los ingresos y gastos estén configurados con la misma frecuencia (por ejemplo, Mensual) para obtener la comparación más precisa en la "Vista General del Hogar".</li>
+            <li><strong>Revisa las Tendencias:</strong> Consulta la sección de Tendencias una vez al mes para ver si tus hábitos de gasto están cambiando.</li>
+            <li><strong>Copia de seguridad frecuente:</strong> Dado que los datos son locales, perder el dispositivo significa perder los datos. ¡Utiliza la función de Copia de Seguridad Cifrada con regularidad!</li>
+        </ul>
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
 
-        <section id="getting-started">
-            <h2>2. Primeros Pasos</h2>
-            <p>La <strong>Vista General del Hogar</strong> es tu centro de control. Muestra un resumen de ingresos, gastos y, lo más importante, la contribución calculada para cada miembro basada en la estrategia seleccionada.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/household_overview.webp" alt="Vista General del Hogar" loading="lazy">
-                <div class="caption">La pantalla de Vista General del Hogar mostrando un resumen financiero consolidado.</div>
-            </div>
-            <a href="#" class="back-to-top">↑ Volver al Menú</a>
-        </section>
+    <section id="import-formats">
+        <h2>10. Guía Técnica: Formatos de Importación CSV</h2>
+        <p>La aplicación te permite importar datos utilizando valores separados por comas (CSV). Todos los archivos de importación requieren un encabezado exacto en la primera línea. A continuación se muestran las columnas requeridas, los tipos de datos y ejemplos para cada tipo de importación.</p>
 
-        <section id="members">
-            <h2>3. Gestión de Miembros</h2>
-            <p>Para añadir un nuevo miembro, toca el botón <strong>+</strong> en la pantalla del Hogar. Los miembros son la base de todos los cálculos.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/household_add_member.webp" alt="Pantalla de Añadir Miembro" loading="lazy">
-                <div class="caption">Añadiendo un nuevo miembro con nombre y color personalizados.</div>
-            </div>
-            <p><strong>Miembros Regulares:</strong> Normalmente son los principales generadores de ingresos, cuyo sueldo se usa para calcular los ratios de reparto.<br>
-            <strong>Miembros Especiales:</strong> Se usan para dependientes o fondos compartidos (como un 'Bote Común'). Sus ingresos (ayudas, pensiones) se deducen del total de gastos antes de calcular el reparto.</p>
-            <a href="#" class="back-to-top">↑ Volver al Menú</a>
-        </section>
+        <h3>Tipos de Datos Comunes</h3>
+        <ul>
+            <li><strong>Amount (Cantidad):</strong> Números decimales. Utiliza un punto (.) o una coma (,) como separador decimal. Los separadores de miles se eliminan automáticamente. Ejemplos: <code>1000.50</code>, <code>1000,50</code>, <code>1,000.50</code>.</li>
+            <li><strong>Date (Fecha):</strong> Debe estar en formato ISO 8601 (<code>AAAA-MM-DD</code>). Si se deja vacío, se utilizará la fecha actual. Ejemplo: <code>2023-10-24</code>.</li>
+            <li><strong>FrequencyFactor (Factor de Frecuencia):</strong> Un multiplicador que representa la frecuencia con la que ocurre una entrada al mes. Única vez = <code>0.0</code>, Semanal = <code>0.25</code>, Mensual = <code>1.0</code>, Anual = <code>12</code>.</li>
+            <li><strong>Color (Color):</strong> Un entero largo ARGB de 32 bits que representa el color hexadecimal. Ejemplo: <code>4284612846</code> (que equivale a 0xFF6200EE).</li>
+            <li><strong>Boolean (Booleano):</strong> <code>true</code> o <code>false</code>.</li>
+        </ul>
 
-        <section id="income">
-            <h2>4. Añadir Ingresos</h2>
-            <p>Registra todas tus fuentes de ingresos en la sección de <strong>Ingresos</strong>. Puedes ver un desglose de quién contribuye con cuánto al total del hogar.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/income_overview.webp" alt="Seguimiento de Ingresos" loading="lazy">
-                <div class="caption">Desglose de ingresos por miembro y categoría.</div>
-            </div>
-            <h3>Tendencias de Ingresos</h3>
-            <p>La aplicación mantiene un registro de tu historial financiero. Al cambiar el importe de un ingreso, se crea un registro historizado, lo que te permite ver cómo evolucionan tus ganancias con el tiempo.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_income_with_history.webp" alt="Tendencias de Ingresos" loading="lazy">
-                <div class="caption">Visualiza tu historial de ingresos y las tendencias de crecimiento.</div>
-            </div>
-            <a href="#" class="back-to-top">↑ Volver al Menú</a>
-        </section>
+        <h3>Members (Miembros)</h3>
+        <p><strong>Encabezado:</strong> <code>Name, Type, Color</code></p>
+        <p><strong>Reglas:</strong> Tipo 1 = Regular, Tipo 2 = Especial.</p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+Name, Type, Color<br>
+Alice, 1, 4284612846<br>
+Bob, 1, 4278224128<br>
+Kids Fund, 2, 4294951115
+        </div>
 
-        <section id="expenses">
-            <h2>5. Seguimiento de Gastos</h2>
-            <p>Los gastos están categorizados para ayudarte a identificar a dónde va tu dinero. Pueden asignarse a miembros individuales o al hogar compartido.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/expenses_overview.webp" alt="Seguimiento de Gastos" loading="lazy">
-                <div class="caption">Lista de gastos categorizados con un gráfico circular visual.</div>
-            </div>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_expenses_with_history.webp" alt="Historial de Gastos" loading="lazy">
-                <div class="caption">Analiza patrones de gasto con datos históricos de tendencias.</div>
-            </div>
-            <a href="#" class="back-to-top">↑ Volver al Menú</a>
-        </section>
+        <h3>Incomes (Ingresos)</h3>
+        <p><strong>Encabezado:</strong> <code>MemberName, Amount, Description, FrequencyFactor, Date</code></p>
+        <p><strong>Reglas:</strong> <code>MemberName</code> debe coincidir exactamente con un miembro existente.</p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+MemberName, Amount, Description, FrequencyFactor, Date<br>
+Alice, 5000.00, Primary Salary, 1.0, 2023-10-25<br>
+Bob, 300.50, Freelance, 0.0, 2023-10-26
+        </div>
 
-        <section id="goals">
-            <h2>6. Gestión de Objetivos y Presupuestos</h2>
-            <p>La sección de <strong>Objetivos</strong> es una potente herramienta tanto para ahorrar para tus sueños como para limitar el gasto mediante presupuestos.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_overview_with_transaction_log.webp" alt="Vista General de Objetivos" loading="lazy">
-                <div class="caption">Pantalla principal de objetivos mostrando barras de progreso y transacciones recientes.</div>
-            </div>
+        <h3>Expenses (Gastos)</h3>
+        <p><strong>Encabezado:</strong> <code>MemberName, CategoryName, Amount, Description, FrequencyFactor, Date</code></p>
+        <p><strong>Reglas:</strong> Si el <code>CategoryName</code> no existe, se creará automáticamente.</p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+MemberName, CategoryName, Amount, Description, FrequencyFactor, Date<br>
+Alice, Rent, 1500.00, November Rent, 1.0, 2023-11-01<br>
+Bob, Groceries, 120.45, Weekend Shopping, 0.0, 2023-11-05
+        </div>
 
-            <h3>Crear un Objetivo de Ahorro</h3>
-            <p>Al crear un objetivo de ahorro, puedes establecer una cantidad meta e incluso incluir intereses esperados. Esto te ayuda a mantener la motivación al ver cómo se llena la barra de progreso.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_goal_with_target.webp" alt="Añadir Objetivo de Ahorro" loading="lazy">
-                <div class="caption">Configuración de un nuevo objetivo de ahorro con una meta específica.</div>
-            </div>
+        <h3>Categories (Categorías)</h3>
+        <p><strong>Encabezado:</strong> <code>Name</code></p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+Name<br>
+Groceries<br>
+Utilities<br>
+Entertainment
+        </div>
 
-            <h3>Crear un Presupuesto</h3>
-            <p>Los presupuestos son objetivos "invertidos". En lugar de ahorrar hasta una meta, estableces un límite para una categoría o periodo específico. La app te avisa cuando te acercas a tu límite.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_budget.webp" alt="Añadir Presupuesto" loading="lazy">
-                <div class="caption">Definición de un límite máximo de gasto para un presupuesto.</div>
-            </div>
+        <h3>Goals (Objetivos)</h3>
+        <p><strong>Encabezado:</strong> <code>Name, TargetAmount, Color, Date, MemberName, IsBudget, HasInterest, AnnualInterestRate</code></p>
+        <p><strong>Reglas:</strong> <code>IsBudget</code> determina si el objetivo funciona como un límite presupuestario.</p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+Name, TargetAmount, Color, Date, MemberName, IsBudget, HasInterest, AnnualInterestRate<br>
+Vacation, 3000.00, 4284612846, 2023-01-01, Alice, false, false, 0.0<br>
+Monthly Food, 600.00, 4294901760, 2023-10-01, , true, false, 0.0
+        </div>
 
-            <h3>Gestión del Progreso</h3>
-            <p>Añade transacciones manualmente o configura <strong>Transacciones Recurrentes</strong> para contribuciones de ahorro regulares o reinicios mensuales del presupuesto.</p>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_add_transaction_recurring.webp" alt="Transacción Recurrente" loading="lazy">
-                <div class="caption">Automatiza tus finanzas con transacciones recurrentes de objetivos.</div>
-            </div>
+        <h3>Goal Transactions (Transacciones de Objetivos)</h3>
+        <p><strong>Encabezado:</strong> <code>GoalName, Amount, Note, FrequencyFactor, Date</code></p>
+        <div style="background:#f4f4f4; padding:8px; border-radius:4px; font-family:monospace; font-size:0.85rem; overflow-x:auto;">
+GoalName, Amount, Note, FrequencyFactor, Date<br>
+Vacation, 200.00, October Savings, 1.0, 2023-10-28<br>
+Monthly Food, 55.30, Supermarket, 0.0, 2023-11-02
+        </div>
 
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_edit_goal_add_interest.webp" alt="Añadir Intereses" loading="lazy">
-                <div class="caption">Registra pagos de intereses para ver cómo tus ahorros crecen más rápido.</div>
-            </div>
-
-            <h3>Hitos y Tendencias</h3>
-            <p>¡Celebra tu progreso! La aplicación te informa cuando alcanzas hitos como estar "A la mitad" de un presupuesto o "Casi allí" con tus ahorros.</p>
-            <div style="display: flex; gap: 8px; margin: 24px 0;">
-                <div class="screenshot-container" style="flex: 1; margin: 0;">
-                    <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_milestone_savings_almost_there.webp" alt="Hito de Ahorro">
-                </div>
-                <div class="screenshot-container" style="flex: 1; margin: 0;">
-                    <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/goals_milestone_budget_halfway_through.webp" alt="Hito de Presupuesto">
-                </div>
-            </div>
-
-            <p>Usa la vista de <strong>Tendencias</strong> para ver fechas estimadas de finalización de ahorros o días restantes de un presupuesto basándose en tu historial de transacciones.</p>
-            <div style="display: flex; gap: 8px; margin: 24px 0;">
-                <div class="screenshot-container" style="flex: 1; margin: 0;">
-                    <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_goals_with_savings.webp" alt="Tendencias de Ahorro">
-                </div>
-                <div class="screenshot-container" style="flex: 1; margin: 0;">
-                    <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/trends_goals_with_budget.webp" alt="Tendencias de Presupuesto">
-                </div>
-            </div>
-
-            <a href="#" class="back-to-top">↑ Volver al Menú</a>
-        </section>
-
-        <section id="calculations">
-            <h2>7. Modelos de Contribución</h2>
-            <p>Elige la estrategia que mejor se adapte a los valores de tu hogar. Puedes cambiarla en cualquier momento en los ajustes.</p>
-            <table>
-                <tr><th>Modelo</th><th>Descripción</th></tr>
-                <tr><td><strong>Reparto 50/50</strong></td><td>Parte igual para todos, independientemente de los ingresos.</td></tr>
-                <tr><td><strong>Reparto Relativo</strong></td><td>Proporcional a la parte de cada miembro del ingreso total.</td></tr>
-                <tr><td><strong>Cantidad Fija</strong></td><td>Cada miembro se queda con una suma fija; el resto va al bote común.</td></tr>
-                <tr><td><strong>Cuenta Conjunta</strong></td><td>Todos los ingresos van a un solo bote; todos los gastos salen de ahí.</td></tr>
-            </table>
-            <div class="screenshot-container">
-                <img src="https://fluflatuet.github.io/householdfinance-privacy-policy/settings_strategy_and_general.webp" alt="Vista General de Ajustes" loading="lazy">
-                <div class="caption">Cambia entre estrategias de contribución con un solo toque.</div>
-            </div>
-            <a href="#" class="back-to-top">↑ Volver al Menú</a>
-        </section>
-
-        <section id="settings">
-            <h2>8. Configuración y Seguridad</h2>
-            <p>Tu privacidad es lo primero. Todos los datos están cifrados mediante SQLCipher y se almacenan solo en tu dispositivo. Nosotros nunca vemos tus datos financieros.</p>
-            <ul>
-                <li><strong>Biometría:</strong> Activa el desbloqueo por huella o facial para mayor seguridad.</li>
-                <li><strong>Gestión de Datos:</strong> Exporta a CSV para análisis externos o crea copias de seguridad cifradas.</li>
-                <li><strong>Localización:</strong> Personaliza el símbolo de tu moneda y el idioma de la app.</li>
-            </ul>
-            <a href="#" class="back-to-top">↑ Volver al Menú</a>
-        </section>
-
-        <section id="best-practices">
-            <h2>9. Mejores Prácticas</h2>
-            <div class="tip">
-                <strong>Consejo:</strong> Usa el "Miembro Compartido" para gastos que beneficien a todo el hogar, como comida o suministros.
-            </div>
-            <ul>
-                <li><strong>La frecuencia importa:</strong> Asegúrate de que todos los ingresos y gastos tengan la misma frecuencia (p. ej., Mensual) para una comparación más precisa en la "Vista General del Hogar".</li>
-                <li><strong>Revisa las tendencias:</strong> Consulta la sección de Tendencias una vez al mes para ver si tus hábitos de gasto están cambiando.</li>
-                <li><strong>Copias de seguridad frecuentes:</strong> Como los datos son locales, perder el dispositivo significa perder los datos. ¡Usa la función de Copia de Seguridad Cifrada regularmente!</li>
-            </ul>
-            <a href="#" class="back-to-top">↑ Volver al Menú</a>
-        </section>
-    </main>
+        <a href="#" class="back-to-top">↑ Volver al Menú</a>
+    </section>
+</main>
 </body>
 </html>
